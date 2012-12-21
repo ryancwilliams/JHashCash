@@ -83,7 +83,7 @@ public class HashCash {
      * @param hashCash the hashCash to compute the level for
      * @return the security level of the entered hashCash
      */
-    public int getSecurityLevel(String hashCash) {
+    public final int getSecurityLevel(String hashCash) {
 
         hashGenerator.update(hashCash.getBytes());
 
@@ -118,7 +118,7 @@ public class HashCash {
      * @param key the key value for this HashCash
      * @return the HashCash string
      */
-    private String createHashCash(String data, String key) {
+    protected final String createHashCash(String data, String key) {
         String output = data + "::" + key;
         return output;
     }

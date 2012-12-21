@@ -1,6 +1,6 @@
 
-import java.security.NoSuchAlgorithmException;
 import com.github.ryancwilliams.JHashCash.HashCash;
+import java.security.NoSuchAlgorithmException;
 import java.util.Scanner;
 
 /*

@@ -4,11 +4,8 @@
  */
 package com.github.ryancwilliams.JHashCash;
 
-import com.sun.corba.se.impl.logging.UtilSystemException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Random;
-import sun.text.normalizer.UTF16;
 
 /**
  *

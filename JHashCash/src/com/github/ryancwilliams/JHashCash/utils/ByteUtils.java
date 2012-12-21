@@ -9,11 +9,19 @@ package com.github.ryancwilliams.JHashCash.utils;
  * @author ryanwilliams
  */
 public class ByteUtils {
+    
+    /**
+     * Counts the leading binary zeros in a byte
+     * @param valueByte the byte to count the leading binary zeros for
+     * @return the number of leading zeros in the entered byte
+     */
     public static int countLeadingZeros(byte valueByte) {
+        //Convert the byto to a unsigned int
         int value = valueByte;
         if (value < 0) {
             value += 256;
         }
+        //count the zeros
         if (value >= 0x80) {
             return 0;
         } else if (value >= 0x40) {

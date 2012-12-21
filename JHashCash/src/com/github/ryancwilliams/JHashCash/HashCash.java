@@ -49,8 +49,6 @@ public class HashCash {
             //Create HashCash
             String hashCash = createHashCash(data, key);
 
-            System.out.println(hashCash);
-
             //Test HashCash
             int level = getSecurityLevel(hashCash);
             //Check if HashCash is better than best HashCash
@@ -58,10 +56,13 @@ public class HashCash {
                 //If beter save HashCash
                 currentHashCash = hashCash;
                 currentLevel = level;
+                
+                //Debug
+                System.out.println(hashCash + " Security Level : " + level);
+
             }
 
-            System.out.println(level);
-
+            
         }
         return currentHashCash;
     }
@@ -72,14 +73,15 @@ public class HashCash {
 
         byte hash[] = hashGenerator.digest();
 
-        for (byte item : hash) {
-            int value = item;
-            if (value < 0) {
-                value += 256;
-            }
-            System.out.print(value + " : ");
-        }
-        System.out.println();
+        //Debug
+//        for (byte item : hash) {
+//            int value = item;
+//            if (value < 0) {
+//                value += 256;
+//            }
+//            System.out.print(value + " : ");
+//        }
+//        System.out.println();
 
         int level = 0;
 

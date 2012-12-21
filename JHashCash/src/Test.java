@@ -19,8 +19,10 @@ public class Test {
     public static void main(String[] args) throws NoSuchAlgorithmException {
         HashCash hc = new HashCash();
         
-        System.out.println(hc.getSecurityLevel("test::AvTP4OWRLMXzhYFT"));
+        //System.out.println(hc.getSecurityLevel("test::AvTP4OWRLMXzhYFT"));
         
-        //hc.GenerateHashCash("test", 15);
+        String hashCash = hc.GenerateHashCash("test", 20);
+        
+        System.out.println(hashCash + " Security Level : " + hc.getSecurityLevel(hashCash));
     }
 }
